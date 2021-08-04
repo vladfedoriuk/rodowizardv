@@ -1,0 +1,18 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> {% block title %} {% endblock %} </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+        {% block styles %} {% include "core/includes/styles.html" %} {% endblock %}
+    </head>
+    <body>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+        {% block scripts %} {% include "core/includes/scripts.html" %} {% endblock %}
+    </body>
+</html>

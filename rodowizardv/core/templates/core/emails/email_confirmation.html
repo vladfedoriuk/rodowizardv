@@ -1,0 +1,24 @@
+{% extends "core/emails/base.html" %}
+{% load i18n %}
+
+{% block title %}  {% translate "Email confirmation" %} {% endblock %}
+
+{% block content %} 
+    <h3 class="d-flex justify-content-center text-danger">
+         {% translate "Please, confirm your email." %} 
+    </h3>
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <p> {% translate "In order to proceed with giving your consent, please verify your email by clicking:" %} </p>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <a href="{{ confirmation_link }}"> 
+                <button type="button" class="btn btn-success btn-sm">
+                    {% translate "here." %}
+                </button>
+            </a>
+        </div>
+    </div>
+{% endblock %}

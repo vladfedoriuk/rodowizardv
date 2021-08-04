@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+{% load i18n %}
+
+{% block title %}  {% translate  "Confirmed" %} {% endblock %}
+
+{% block content %}
+    <h2 class="d-flex justify-content-center">
+         {% translate "Email has been confirmed." %}
+    </h2>
+    <div class="d-flex justify-content-center text-muted">
+        <p> {% blocktranslate %} {{email}} is authenticated now. {% endblocktranslate %}</p>
+    </div>
+{% endblock %}

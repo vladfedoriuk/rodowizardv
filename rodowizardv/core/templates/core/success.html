@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+{% load i18n %}
+
+{% block title %} Success {% endblock %}
+
+{% block content %}
+    <h2 class="d-flex justify-content-center text-danger">
+      {% translate "ATTENTION" %}
+    </h2>
+    <h2 class="d-flex justify-content-center text-danger">
+       {% translate "Please, check out your mail and follow a confirmation link." %}
+    </h2>
+    <div class="d-flex justify-content-center text-muted">
+        <p> {% translate "We have sent a confirmation link to an email you have provided. You will need to open it in order to prove your identity." %} </p>
+    </div>
+    <div class="row form-group">
+        <div class="col d-flex justify-content-center">
+            <a href="{{ training.get_absolute_url }}">
+                <button type="button" class="btn btn-success" > {% translate "OK" %} </button>
+            </a>
+        </div>
+    </div>
+{% endblock %}

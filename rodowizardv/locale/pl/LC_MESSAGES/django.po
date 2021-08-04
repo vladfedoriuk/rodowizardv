@@ -1,0 +1,228 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-13 21:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: core/forms/personal_data.py:20
+msgid ""
+"\n"
+"                    A phone number should match the pattern: \n"
+"                    +xxxxxxxxx or xxxxxxxxx, where 'x' denotes a digit,\n"
+"                    and it must consist of up to 20 digits."
+msgstr ""
+
+#: core/forms/personal_data.py:42
+msgid ""
+"\n"
+"                A postal code should match the pattern: \n"
+"                xx-xxx, where 'x' denotes a digit,\n"
+"                and it must consist of 5 digits."
+msgstr ""
+
+#: core/forms/training.py:20
+msgid "The time the training ends cannot be less than the time it starts."
+msgstr ""
+
+#: core/models.py:10
+msgid "Training title"
+msgstr ""
+
+#: core/models.py:13
+msgid "Start time"
+msgstr ""
+
+#: core/models.py:13
+msgid "The date and time training starts"
+msgstr ""
+
+#: core/models.py:16
+msgid "End time"
+msgstr ""
+
+#: core/models.py:16
+msgid "The date and time training ends"
+msgstr ""
+
+#: core/models.py:43
+msgid "Name"
+msgstr ""
+
+#: core/models.py:44
+msgid "Surname"
+msgstr ""
+
+#: core/models.py:45
+msgid "Email address"
+msgstr ""
+
+#: core/models.py:46
+msgid "Phone Number"
+msgstr ""
+
+#: core/models.py:48
+msgid "Street and number of a building"
+msgstr ""
+
+#: core/models.py:50
+msgid "Postal code"
+msgstr ""
+
+#: core/models.py:51
+msgid "City"
+msgstr ""
+
+#: core/models.py:54
+msgid ""
+"\n"
+"        Consent to the processing of the personal data \n"
+"        in a way that is necessary for training realization."
+msgstr ""
+
+#: core/models.py:59 core/models.py:68 core/models.py:77
+msgid "*"
+msgstr ""
+
+#: core/models.py:63
+msgid ""
+"\n"
+"        Consent to granting the third party access to the personal data \n"
+"        in a way that is necessary for training realization."
+msgstr ""
+
+#: core/models.py:72
+msgid ""
+"\n"
+"        Consent to granting the third party access to the personal data \n"
+"        in terms of my participation in the exam."
+msgstr ""
+
+#: core/models.py:102
+msgid "Personal Data"
+msgstr ""
+
+#: core/templates/core/confirmed.html:4
+msgid "Confirmed"
+msgstr ""
+
+#: core/templates/core/confirmed.html:8
+msgid "Email has been confirmed."
+msgstr ""
+
+#: core/templates/core/confirmed.html:11
+#, python-format
+msgid " %(email)s is authenticated now. "
+msgstr ""
+
+#: core/templates/core/emails/email_confirmation.html:4
+msgid "Email confirmation"
+msgstr ""
+
+#: core/templates/core/emails/email_confirmation.html:8
+msgid "Please, confirm your email."
+msgstr ""
+
+#: core/templates/core/emails/email_confirmation.html:13
+msgid ""
+"In order to proceed with giving your consent, please verify your email by "
+"clicking:"
+msgstr ""
+"Aby kontynuować wyrażanie zgody, zweryfikuj swój adres e-mail przez "
+"kliknięcie:"
+
+#: core/templates/core/emails/email_confirmation.html:19
+msgid "here."
+msgstr "tutaj."
+
+#: core/templates/core/emails/email_training_owner.html:4
+msgid "New RODO data"
+msgstr "Nowe dane RODO"
+
+#: core/templates/core/emails/email_training_owner.html:8
+msgid "New RODO data were added to the database."
+msgstr "Nowe dane RODO zostały dodane do bazy danych."
+
+#: core/templates/core/includes/forms/personal_data_form.html:78
+msgid "stands for required"
+msgstr "oznacza pole obowiązkowe"
+
+#: core/templates/core/includes/forms/personal_data_form.html:112
+msgid "Submit"
+msgstr "Zatwierdź"
+
+#: core/templates/core/includes/forms/personal_data_form.html:118
+msgid "Next"
+msgstr "Następny"
+
+#: core/templates/core/success.html:8
+msgid "ATTENTION"
+msgstr "UWAGA"
+
+#: core/templates/core/success.html:11
+msgid "Please, check out your mail and follow a confirmation link."
+msgstr "Sprawdź swoją pocztę i kliknij link potwierdzający."
+
+#: core/templates/core/success.html:14
+msgid ""
+"We have sent a confirmation link to an email you have provided. You will "
+"need to open it in order to prove your identity."
+msgstr ""
+"Na podany przez Ciebie adres e-mail wysłaliśmy link potwierdzający. "
+"Będziesz musisz go otworzyć, aby potwierdzić swoją tożsamość."
+
+#: core/templates/core/success.html:19
+msgid "OK"
+msgstr "OK"
+
+#: core/templates/core/wizard.html:8
+msgid ""
+"A form of giving an individual consent to processing of the personal data"
+msgstr "Forma wyrażenia indywidualnej zgody na przetwarzanie danych osobowych"
+
+#: core/templates/core/wizard.html:41
+msgid "Name and Surname"
+msgstr "Imię i Nazwisko"
+
+#: core/templates/core/wizard.html:44
+msgid "Contact information"
+msgstr "Informacje kontaktowe"
+
+#: core/templates/core/wizard.html:47
+msgid "Address Details"
+msgstr "Dane adresowe"
+
+#: core/templates/core/wizard.html:50
+msgid "Summary"
+msgstr "Podsumowanie"
+
+#: core/views.py:49
+msgid "Email Confirmation"
+msgstr "Potwierdzenie e-mailem"
+
+#: core/views.py:65
+msgid "New RODO data."
+msgstr "Nowe dane RODO"
+
+#: rodowizardv/settings.py:119
+msgid "English"
+msgstr "Angielski"
+
+#: rodowizardv/settings.py:120
+msgid "Polish"
+msgstr "Polski"

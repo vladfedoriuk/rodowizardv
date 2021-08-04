@@ -1,0 +1,57 @@
+{% extends 'core/base.html' %}
+{% load i18n %}
+
+{% block title %} {{training.title}} {% endblock %}
+
+{% block content %}
+    <h2 class="d-flex justify-content-center">
+        {% translate "A form of giving an individual consent to processing of the personal data" %}
+    </h2>
+    <div class="container">
+       <h3 class=" d-flex justify-content-center text-muted"> {{ training.title }} </h3>
+    </div>
+    <div class="container d-flex justify-content-center">
+        <div class="col d-flex justify-content-center" id="block_1" style="font-size: 500%;">
+            <span id="1" class="fa-stack fa-1x" style="color: green;">
+                <i class="fas fa-circle fa-stack-1x" ></i>
+                    <span class="fa-stack-1x" style="color: white"> 1 </span>
+            </span>
+        </div>
+        <div class="col d-flex justify-content-center" style="font-size: 500%;" id="block_2">
+            <span class="fa-stack fa-1x">
+                <i id="2" class="fas fa-circle fa-stack-1x" style="color: gray;"></i>
+                    <span class="fa-stack-1x" style="color: white"> 2 </span>
+            </span>
+        </div>
+        <div class="col d-flex justify-content-center" style="font-size: 500%;" id="block_3">
+            <span class="fa-stack fa-1x">
+                <i id="3" class="fas fa-circle fa-stack-1x" style="color: gray;"></i>
+                    <span class="fa-stack-1x" style="color: white"> 3 </span>
+            </span>
+        </div>
+        <div class="col d-flex justify-content-center" style="font-size: 500%;" id="block_4">
+            <span class="fa-stack fa-1x">
+                <i id="4" class="fas fa-circle fa-stack-1x" style="color: gray;"></i>
+                    <span class="fa-stack-1x" style="color: white"> 4 </span>
+            </span>
+        </div>
+    </div>
+    <div class="container d-flex justify-content-center">
+        <div class="col d-flex justify-content-center">
+            <p class="text-muted"> {% translate "Name and Surname" %} </p>
+        </div>
+         <div class="col d-flex justify-content-center">
+            <p class="text-muted"> {% translate "Contact information" %} </p>
+        </div>
+         <div class="col d-flex justify-content-center">
+            <p class="text-muted"> {% translate "Address Details" %} </p>
+        </div>
+         <div class="col d-flex justify-content-center">
+            <p class="text-muted"> {% translate "Summary" %} </p>
+        </div>
+    </div>
+
+    {% include "core/includes/forms/personal_data_form.html" with form=personal_data_form training=training %}
+
+
+{%endblock%}

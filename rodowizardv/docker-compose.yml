@@ -1,0 +1,49 @@
+version: "3"
+
+networks:
+    rodowizardvnet:
+
+volumes:
+    postgres_vol:
+    
+   
+services:
+    database:
+        image: postgres
+        networks:
+            - rodowizardvnet
+        ports:
+            - 127.0.0.1:9072:5432
+        volumes:
+            - postgres_vol:/var/lib/postgresql/data
+        environment:
+            - POSTGRES_DB=rodowizardv
+            - POSTGRES_USER=rodowizardv
+            - POSTGRES_PASSWORD=pass4rodowizardv
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "1024k"
+                max-file: "5"
+
+
+    web:
+        depends_on:
+            - database
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        restart: always
+        networks:
+            - rodowizardvnet
+        ports:
+            - 127.0.0.1:9071:9071
+        expose:
+            - 9071
+        volumes:
+            - .:/code  
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "1024k"
+                max-file: "5"

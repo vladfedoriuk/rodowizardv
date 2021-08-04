@@ -1,0 +1,123 @@
+{% load i18n %}
+
+<div class="container d-flex justify-content-center">
+    <form action="{{ training.get_absolute_url }}" enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        <div class="text-danger">
+            {{ form.non_field_errors }}
+        </div>
+        <ul>
+            {% for field in form %}
+                {% if field.errors %}
+                    <div class="text-danger">
+                        {{ field.errors }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+
+        <div id="name-surname">
+            <div class="row form-group">
+                <div class="col">
+                    {{ form.name.label_tag }}
+                    {{ form.name }}
+                    <small id="name-help" class="form-text text-muted"> {{ form.name.help_text }} </small>
+                </div>
+
+                <div class="col">
+                    {{ form.surname.label_tag }}
+                    {{ form.surname }}
+                    <small id="surname-help" class="form-text text-muted"> {{ form.surname.help_text }} </small>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="address-details">
+            <div class="row form-group">
+                <div class="col">
+                    {{ form.email.label_tag }}
+                    {{ form.email }}
+                    <small id="email-help" class="form-text text-muted"> {{ form.email.help_text }} </small>
+                </div>
+
+                <div class="col">
+                    {{ form.phone_number.label_tag }}
+                    {{ form.phone_number }}
+                    <small id="phone-number-help" class="form-text text-muted"> {{ form.phone_number.help_text }} </small>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="street-post-city">
+            <div class="row form-group">
+                <div class="col-6">
+                    {{ form.street.label_tag }}
+                    {{ form.street }}
+                    <small id="street-help" class="form-text text-muted"> {{ form.street.help_text }} </small>
+                </div>
+
+                <div class="col">
+                    {{ form.post_code.label_tag }}
+                    {{ form.post_code }}
+                    <small id="post-code-help" class="form-text text-muted"> {{ form.post_code.help_text }} </small>
+                </div>
+
+                <div class="col-4">
+                    {{ form.city.label_tag }}
+                    {{ form.city}}
+                    <small id="city-help" class="form-text text-muted"> {{ form.city.help_text }} </small>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="summary">
+            <span class="text-danger">*</span> {% translate "stands for required" %}.
+            <div class="row form-group">
+                <div class="col d-flex flex-row">
+                    <div class="form-check-label text-danger">
+                        {{ form.consent_1.label_tag }}
+                    </div>
+                    {{ form.consent_1 }}
+                    <small id="consent-1-help" class="form-text text-muted"> {{ form.consent_1.help_text }} </small>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col d-flex flex-row">
+                    <div class="form-check-label text-danger">
+                        {{ form.consent_2.label_tag}}
+                    </div>
+                    {{ form.consent_2 }}
+                    <small id="consent-2-help" class="form-text text-muted"> {{ form.consent_2.help_text }} </small>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col d-flex flex-row">
+                    <div class="form-check-label text-danger">
+                        {{ form.consent_3.label_tag }}
+                    </div>
+                    {{ form.consent_3 }}
+                    <small id="consent-3-help" class="form-text text-muted"> {{ form.consent_3.help_text }} </small>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row form-group" id="submit">
+            <div class="col d-flex justify-content-center">
+                <button type="submit" class="btn btn-success">{% translate "Submit" %} </button>
+            </div>
+        </div>
+
+        <div class="row form-group" id="next">
+            <div class="col d-flex justify-content-center">
+                <button type="button" class="btn btn-success">{% translate "Next" %} </button>
+            </div>
+        </div>
+
+    </form>
+</div>

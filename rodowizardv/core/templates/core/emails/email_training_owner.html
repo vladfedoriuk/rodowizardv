@@ -1,0 +1,17 @@
+{% extends "core/emails/base.html" %}
+{% load i18n %}
+
+{% block title %}  {% translate "New RODO data" %}  {% endblock %}
+
+{% block content %} 
+    <h3 class="d-flex justify-content-center text-danger">
+        {% translate  "New RODO data were added to the database." %}    
+    </h3>
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <textarea rows=10 cols=50 readonly>{{ data_json }}</textarea>
+            </div>
+        </div>
+    </div>
+{% endblock %}
